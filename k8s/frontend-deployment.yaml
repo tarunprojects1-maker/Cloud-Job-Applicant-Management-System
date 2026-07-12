@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudjob-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudjob-frontend
+  template:
+    metadata:
+      labels:
+        app: cloudjob-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: cloud-job-applicant-management-system-frontend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5173

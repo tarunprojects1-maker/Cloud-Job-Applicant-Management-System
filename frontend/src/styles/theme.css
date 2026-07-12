@@ -1,0 +1,144 @@
+:root{
+  --primary:#4F8EF7;
+  --secondary:#6FCF97;
+  --accent:#7FD1AE;
+
+  --background:#F7F9FC;
+
+  --card:rgba(255,255,255,.72);
+
+  --text:#1F2937;
+  --text-light:#6B7280;
+
+  --border:rgba(255,255,255,.35);
+
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+
+  --radius:18px;
+
+  --transition:.3s ease;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Inter,Segoe UI,sans-serif;
+  background:var(--background);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+.bg-circle{
+position:fixed;
+border-radius:50%;
+filter:blur(35px);
+opacity:.35;
+z-index:-1;
+animation:float 10s ease-in-out infinite;
+background:linear-gradient(135deg,#9fd7c7,#dcefe8);
+}
+
+.c1{
+width:220px;
+height:220px;
+top:60px;
+left:80px;
+}
+
+.c2{
+width:150px;
+height:150px;
+top:320px;
+right:120px;
+animation-delay:2s;
+}
+
+.c3{
+width:120px;
+height:120px;
+bottom:100px;
+left:150px;
+animation-delay:4s;
+}
+
+.c4{
+width:180px;
+height:180px;
+bottom:80px;
+right:80px;
+animation-delay:6s;
+}
+
+.c5{
+width:90px;
+height:90px;
+top:180px;
+left:35%;
+animation-delay:3s;
+}
+
+.c6{
+width:140px;
+height:140px;
+top:60%;
+right:35%;
+animation-delay:5s;
+}
+.primary-btn{
+background:#4F8EF7;
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+box-shadow:0 10px 25px rgba(79,142,247,.25);
+}
+
+.primary-btn:hover{
+transform:translateY(-3px);
+background:#3A79E8;
+}
+
+.page-container{
+max-width:1300px;
+margin:auto;
+padding:40px;
+}
+
+.section-title{
+font-size:42px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#6B7280;
+margin-bottom:30px;
+}
+.modern-input{
+width:100%;
+padding:16px 18px;
+border-radius:12px;
+border:1px solid #E5E7EB;
+background:rgba(255,255,255,.85);
+font-size:15px;
+outline:none;
+transition:.3s;
+margin-bottom:18px;
+}
+
+.modern-input:focus{
+border-color:#4F8EF7;
+box-shadow:0 0 0 4px rgba(79,142,247,.15);
+}
+
+.modern-input::placeholder{
+color:#9CA3AF;
+}

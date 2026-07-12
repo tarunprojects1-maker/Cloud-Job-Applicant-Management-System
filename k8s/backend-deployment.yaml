@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudjob-backend
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: cloudjob-backend
+
+  template:
+    metadata:
+      labels:
+        app: cloudjob-backend
+
+    spec:
+      containers:
+      - name: backend
+        image: cloud-job-applicant-management-system-backend:latest
+        imagePullPolicy: IfNotPresent
+
+        ports:
+        - containerPort: 5000
+
+        env:
+        - name: PORT
+          value: "5000"
+
+        - name: DB_HOST
+          value: "cloudjob-db.cda4gw4eay21.ap-south-2.rds.amazonaws.com"
+
+        - name: DB_PORT
+          value: "3306"
+
+        - name: DB_USER
+          value: "admin"
+
+        - name: DB_PASSWORD
+          value: "internship12345678"
+
+        - name: DB_NAME
+          value: "job_applicant_management"
+
+        - name: JWT_SECRET
+          value: "cloudjobapplicant2026secretkey"

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloudjob-frontend-service
+spec:
+  selector:
+    app: cloudjob-frontend
+  ports:
+    - protocol: TCP
+      port: 5173
+      targetPort: 5173
+      nodePort: 30173
+  type: NodePort
